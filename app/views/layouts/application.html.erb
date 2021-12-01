@@ -12,14 +12,13 @@
 
   <body>
     <nav>
-      <ul>
-        <li>
+        <p style="text-align:center;">
           <%= link_to 'Home', root_path %>
-        </li>
-        <li>
+          
+      
           <%= link_to 'Cadastrar nova receita', new_recipe_path %>
-        </li>
-      </ul>
+        <hr>
+        </p>
     </nav>
     <%= yield %>
   </body>

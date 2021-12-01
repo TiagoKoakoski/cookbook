@@ -1,4 +1,4 @@
-<h1>Informações sobre a receita: <%= @recipe.name %> </h1>
+<h1>Informações sobre a receita: <i><%= @recipe.name %></i> </h1>
 <dl>
   <dt>
     <strong>Nome:</strong> <%= @recipe.name %>
@@ -24,3 +24,10 @@
   </dd>
 
 </dl>
+<%= link_to 'Editar', edit_recipe_path(@recipe) %> 
+<%= link_to 'Apagar', recipe_path(@recipe), method: :delete,
+    data: { confirm: 'Tem certeza que deseja apagar a receita?' }%>
+
+
+<br />
+<%= link_to 'Voltar', root_path %>

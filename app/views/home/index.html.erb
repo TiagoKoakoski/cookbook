@@ -1,6 +1,7 @@
-<h1>Livro de receitas</h1>
-
+<h1 style="text-align:center;">Livro de receitas</h1>
+<p style="text-align:center;">
 <% @recipes.each do | recipe |  %>
   <%= link_to recipe.name, recipe %> 
 <br />
 <% end %>
+</p>

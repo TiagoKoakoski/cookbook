@@ -20,6 +20,22 @@ class RecipesController < ApplicationController
   end
 
   render :new
-end
+  end
+
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(params.require(:recipe).permit(:name, :recipe_type, :cuisine, :ingredients, :cook_method, :cook_time))
+    redirect_to @recipe
+  end
+
+  def destroy
+    recipe = Recipe.find(params[:id])
+    recipe.destroy
+    redirect_to root_path
+  end
 
 end
